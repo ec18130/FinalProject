@@ -1,0 +1,92 @@
+{"frames": {
+
+"HighScore4_00000.png":
+{
+	"frame": {"x":0,"y":540,"w":370,"h":60},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":370,"h":60},
+	"sourceSize": {"w":370,"h":60}
+},
+"HighScore4_00001.png":
+{
+	"frame": {"x":0,"y":480,"w":370,"h":60},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":370,"h":60},
+	"sourceSize": {"w":370,"h":60}
+},
+"HighScore4_00002.png":
+{
+	"frame": {"x":0,"y":420,"w":370,"h":60},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":370,"h":60},
+	"sourceSize": {"w":370,"h":60}
+},
+"HighScore4_00003.png":
+{
+	"frame": {"x":0,"y":360,"w":370,"h":60},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":370,"h":60},
+	"sourceSize": {"w":370,"h":60}
+},
+"HighScore4_00004.png":
+{
+	"frame": {"x":0,"y":300,"w":370,"h":60},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":370,"h":60},
+	"sourceSize": {"w":370,"h":60}
+},
+"HighScore4_00005.png":
+{
+	"frame": {"x":0,"y":240,"w":370,"h":60},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":370,"h":60},
+	"sourceSize": {"w":370,"h":60}
+},
+"HighScore4_00006.png":
+{
+	"frame": {"x":0,"y":180,"w":370,"h":60},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":370,"h":60},
+	"sourceSize": {"w":370,"h":60}
+},
+"HighScore4_00007.png":
+{
+	"frame": {"x":0,"y":120,"w":370,"h":60},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":370,"h":60},
+	"sourceSize": {"w":370,"h":60}
+},
+"HighScore4_00008.png":
+{
+	"frame": {"x":0,"y":60,"w":370,"h":60},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":370,"h":60},
+	"sourceSize": {"w":370,"h":60}
+},
+"HighScore4_00009.png":
+{
+	"frame": {"x":0,"y":0,"w":370,"h":60},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":370,"h":60},
+	"sourceSize": {"w":370,"h":60}
+}},
+"meta": {
+	"app": "http://www.texturepacker.com",
+	"version": "1.0",
+	"image": "HighScore4.png",
+	"format": "RGBA8888",
+	"size": {"w":370,"h":600},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:4d3bb2317fab0db8201507922663fd8e$"
+}
+}
