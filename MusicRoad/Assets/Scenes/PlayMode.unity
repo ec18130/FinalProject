@@ -352,7 +352,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5feef9a0e1925324f9955fce0aa9f41c, type: 2}
+  - {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1261,8 +1261,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8581548573632104494}
-  - component: {fileID: 8581548573632104493}
   - component: {fileID: 9170574755063226161}
+  - component: {fileID: 8581548573632104493}
   - component: {fileID: 8581548573632104492}
   - component: {fileID: 8581548573632104483}
   - component: {fileID: 8581548573632104481}

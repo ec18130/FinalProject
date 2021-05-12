@@ -16,18 +16,6 @@ public class UIManager : MonoBehaviour
     string path;
     bool trackSelected = false;
 
-    void Awake()
-    {
-        GameObject[] objs = GameObject.FindGameObjectsWithTag("AUDIOSOURCE");
-        if (objs.Length > 1)
-        {
-            Destroy(sound);
-        }
-
-        DontDestroyOnLoad(sound);
-        audioSource = sound.GetComponent<AudioSource>();
-    }
-
     void Update() 
     {
         ship.transform.Rotate(Vector3.forward * Time.fixedDeltaTime * 10f);
@@ -35,25 +23,37 @@ public class UIManager : MonoBehaviour
 
     public void OpenExplorer()
     {
-
-        path = EditorUtility.OpenFilePanel("Overwrite with mp3", "", "mp3,wav");
-        if (path != null)
-        {
-            WWW www = new WWW("file:///" + path);
-            songname.text = www.url;
-            audioSource.clip = www.GetAudioClip();
-            audioSource.Play();
-            playbutton.SetActive(true);
-            trackSelected = true;
-        }
+        StartCoroutine(loadMusic());
     }
 
     public void StartGame()
     {
         if (trackSelected == true)
         {
-            audioSource.Stop();
+            DontDestroyOnLoad(sound);
             SceneManager.LoadScene("PlayMode");
+            audioSource.Stop();
+        }
+    }
+
+    IEnumerator loadMusic()
+    {
+        path = EditorUtility.OpenFilePanel("Overwrite with mp3", "", "mp3,wav");
+
+        if (path != null)
+        {
+            WWW www = new WWW("file:///" + path);
+            yield return www;
+            songname.text = www.url;
+            audioSource = sound.GetComponent<AudioSource>();
+            audioSource.clip = www.GetAudioClip();
+            audioSource.Play();
+            playbutton.SetActive(true);
+            trackSelected = true;
+        }
+        else
+        {
+            Debug.Log("Please Select Track Again");
         }
     }
 }

@@ -56,6 +56,7 @@ public class SongScript : MonoBehaviour
 
 		// Need all audio samples.  If in stereo, samples will return with left and right channels interweaved
 		// [L,R,L,R,L,R]
+
 		GameObject audio = GameObject.FindGameObjectWithTag("AUDIOSOURCE");
 		audioSource = audio.GetComponent<AudioSource>();
 
@@ -193,14 +194,17 @@ public class SongScript : MonoBehaviour
             int cameraindex = i * 3;
             while (cameraT < 1)
 			{
-				cameraT += (audiodata.GetComponent<AudioData_AmplitudeBand>()._CurrentAmplitude * (audiodata.GetComponent<AudioData_AmplitudeBand>()._freqBand[0] + audiodata.GetComponent<AudioData_AmplitudeBand>()._freqBand[1] + audiodata.GetComponent<AudioData_AmplitudeBand>()._freqBand[2] + audiodata.GetComponent<AudioData_AmplitudeBand>()._freqBand[3] + +audiodata.GetComponent<AudioData_AmplitudeBand>()._freqBand[4]) * Time.fixedDeltaTime);
+				yield return new WaitForEndOfFrame();
+				cameraT += (audiodata.GetComponent<AudioData_AmplitudeBand>()._CurrentAmplitude * (audiodata.GetComponent<AudioData_AmplitudeBand>()._freqBand[0] + audiodata.GetComponent<AudioData_AmplitudeBand>()._freqBand[1] + audiodata.GetComponent<AudioData_AmplitudeBand>()._freqBand[2]) * Time.fixedDeltaTime);
 				OrientedPoint cameraBP = GetBezierPointOP(cameraPositions[cameraindex].position, cameraPositions[cameraindex + 1].position, cameraPositions[cameraindex + 2].position, cameraPositions[cameraindex + 3].position, cameraT);
 				cameraObject.transform.position = cameraBP.point;
+				yield return new WaitForEndOfFrame();
 				cameraObject.transform.eulerAngles = cameraBP.rot.eulerAngles;
-				yield return new WaitForFixedUpdate();
+				yield return new WaitForEndOfFrame();
+
 			}
-			yield return new WaitForSecondsRealtime(Time.deltaTime / clipLength);
 			cameraT = 0f;
+			yield return new WaitForFixedUpdate();
 		}
 		coroutineAllowed = false;
 	}
